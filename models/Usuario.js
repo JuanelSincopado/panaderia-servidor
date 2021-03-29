@@ -8,14 +8,12 @@ const usuariosSchema = new Schema({
         trime: true,
         unique: true,
     },
-    
     nombre: {
         type: String,
         required: true, 
         trime: true,
         unique: true,
     },
-
     password: {
         type: String,
         required: true,

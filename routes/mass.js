@@ -12,6 +12,7 @@ router.post(
   massController.crearMasa
 );
 router.get("/", massController.obtenerMasas);
+router.get("/activos", massController.obtenerMasasActive);
 router.get("/:id", massController.obtenerMasa);
 router.put("/:id", massController.editarMasa);
 router.delete("/:id", massController.eliminarMasa);

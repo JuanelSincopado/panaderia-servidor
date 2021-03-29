@@ -22,7 +22,7 @@ const massSchema = new Schema({
     },
     estado: {
         type: Boolean,
-        default: false,
+        default: true,
     },
     produccion: {
       type: mongoose.Schema.Types.Map

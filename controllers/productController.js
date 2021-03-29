@@ -68,6 +68,7 @@ exports.editarProducto = async (req, res) => {
 			{ _id: req.params.id },
 			{ $set: req.body },
 			{ new: true }
+
     );
     
 		res.json({ msg: 'Editado con éxito' });

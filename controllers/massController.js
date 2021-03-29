@@ -32,6 +32,18 @@ exports.obtenerMasas = async (req, res) => {
 	}
 };
 
+//Produccion por activos
+exports.obtenerMasasActive = async (req, res) => {
+	try {
+		const masas = await Mass.find({ estado: true});
+
+		res.json({ masas });
+	} catch (error) {
+		console.log(error);
+
+	}
+}
+
 exports.obtenerMasa = async (req, res) => {
 	try {
 		const masas = await Mass.findById(req.params.id);
@@ -52,7 +64,8 @@ exports.editarMasa = async (req, res) => {
 			{ new: true }
 		);
 
-		res.json({ masses });
+		res.json({ msg: 'La masa se editó con exito' });
+
 	} catch (error) {
 		console.log(error);
 		res.status(500).json({ msg: 'Error al editar' });
